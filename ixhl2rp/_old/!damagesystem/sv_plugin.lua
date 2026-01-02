@@ -43,19 +43,19 @@ do
 
 			local blood = self:GetBlood()
 
-			if blood >= 750 then
-				if player:IsUnconscious() and !player.ixUnconsciousOut then
-					player:SetAction("@wakingUp", 100, function(player)
-						player.ixUnconsciousOut = nil
-						player:SetLocalVar("knocked", false)
-						player:SetRagdolled(false)
-					end)
+			-- if blood >= 750 then
+			-- 	if player:IsUnconscious() and !player.ixUnconsciousOut then
+			-- 		player:SetAction("@wakingUp", 100, function(player)
+			-- 			player.ixUnconsciousOut = nil
+			-- 			player:SetLocalVar("knocked", false)
+			-- 			player:SetRagdolled(false)
+			-- 		end)
 
-					player.ixUnconsciousOut = true
-				end
+			-- 		player.ixUnconsciousOut = true
+			-- 	end
 
-				return
-			end
+			-- 	return
+			-- end
 
 			if !player:IsUnconscious() then
 				local ratio = math.Clamp(blood / 750, 0, 1)

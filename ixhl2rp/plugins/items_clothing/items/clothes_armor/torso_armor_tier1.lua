@@ -14,8 +14,8 @@ ITEM.bodyGroups = {
 	[1] = 14
 }
 ITEM.armor = {
-	class = 1,
-	max_durability = 750,
+	class = 2,
+	max_durability = 500,
 	density = 0.75,
 	coverage = {
 		[HITGROUP_CHEST] = 1,

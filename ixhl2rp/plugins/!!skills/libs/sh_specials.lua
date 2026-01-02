@@ -166,7 +166,7 @@ do
 
 		stat = 1 + math.max(isPrimary and stat or math.floor(stat / 4), 0)
 
-		return stat
+		return 25
 	end
 
 	function charMeta:HasSpecialLevel(key, value)

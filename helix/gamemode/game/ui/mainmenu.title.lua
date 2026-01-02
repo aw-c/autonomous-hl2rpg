@@ -514,11 +514,7 @@ PANEL.html = [[
 <div id="test2">
 	<div class="main-btn">
 		<div class="main-btn-ico" src="#" alt=""></div>
-		<a class="main-btn" href="#" onclick="menu.Button(1);">НОВОЕ ПРИБЫТИЕ</a>
-	</div>
-	<div class="main-btn">
-		<div class="main-btn-ico" src="#" alt=""></div>
-		<a class="main-btn" href="#" onclick="menu.Button(2);">ПЕРСОНАЖИ</a>
+		<a class="main-btn" href="#" onclick="menu.Button(1);">ВЫБРАТЬ СТОРОНУ</a>
 	</div>
 	<div class="main-btn">
 		<div class="main-btn-ico" src="#" alt=""></div>
@@ -526,7 +522,7 @@ PANEL.html = [[
 	</div>
 	<div class="main-btn">
 		<div class="main-btn-ico" src="#" alt=""></div>
-		<a class="main-btn" href="#" onclick="menu.Button(4);">ИНФОРМАЦИЯ</a>
+		<a class="main-btn" href="#" onclick="menu.Button(4);">ДИСКОРД</a>
 	</div>
 	<div class="main-btn" id="exit">
 		<div class="main-btn-ico" src="#" alt=""></div>

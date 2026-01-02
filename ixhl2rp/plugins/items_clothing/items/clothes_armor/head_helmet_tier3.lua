@@ -1,4 +1,4 @@
-ITEM.name = "Каска второго класса"
+ITEM.name = "Каска третьего класса"
 ITEM.model = "models/cellar/prop_helmet_nato.mdl"
 ITEM.width = 2
 ITEM.height = 2
@@ -16,7 +16,7 @@ ITEM.bodyGroups = {
 ITEM.noRepair = true
 ITEM.destroyable = true
 ITEM.armor = {
-    class = 2,
+    class = 3,
     max_durability = 350,
     density = 0.75,
     coverage = {

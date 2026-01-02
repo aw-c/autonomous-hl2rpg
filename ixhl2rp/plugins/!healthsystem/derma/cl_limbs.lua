@@ -42,8 +42,11 @@ function PANEL:BuildData()
 			local health = self.character:Health()
 			for k, limb in ipairs(health.body.parts or {}) do
 				if limb.hidden then continue end
-
-				text = text .. string.format("%s — %s/%s HP", limb.name, health:GetPartHealth(limb.id), limb.health) .. ((k != #limbs) and "\n" or "")
+				if (limbs) then
+					text = text .. string.format("%s — %s/%s HP", limb.name, health:GetPartHealth(limb.id), limb.health) .. ((k != #limbs) and "\n" or "")
+				else
+					text = text .. string.format("%s — %s/%s HP", limb.name, health:GetPartHealth(limb.id), limb.health) .. "\n"
+				end
 			end
 				  
 			local description = tooltip:AddRow("description")

@@ -693,12 +693,15 @@ if SERVER then
 		local trace = util.TraceLine(data)
 
 		ix.Item:DropItem(client, item.id, trace.HitPos, ang)
-		
+
 		timer.Simple(0, function()
+			if (!IsValid(item.entity)) then
+				return
+			end
+			
 			local vFlushPoint = item.entity:NearestPoint(trace.HitPos - (trace.HitNormal * 512))
 			vFlushPoint = item.entity:GetPos() - vFlushPoint
-			vFlushPoint = trace.HitPos + vFlushPoint
-
+			vFlushPoint = trace.HitPos + vFlushPoint		
 			item.entity:SetPos(vFlushPoint)
 		end)
 

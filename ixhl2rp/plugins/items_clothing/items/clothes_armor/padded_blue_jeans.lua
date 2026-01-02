@@ -16,7 +16,7 @@ ITEM.iconCam = {
 }
 ITEM.armor = {
     class = 1,
-    max_durability = 500,
+    max_durability = 300,
     density = 0.5,
     coverage = {
         [HITGROUP_LEFTLEG] = 0.5,

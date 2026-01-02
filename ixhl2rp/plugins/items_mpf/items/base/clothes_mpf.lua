@@ -94,6 +94,11 @@ function ItemClothMPF:UpdateMPF(client, armband)
 		local name = client:GetName()
 		local format = "(c24%:).*(°.*)"
 		local ranks = string.match(name, "c24%:(.*)°.*")
+		
+		if (!ranks) then
+			return
+		end
+
 		local a = string.Explode(":", ranks)
 		local spec = Schema:GetPlayerCombineSpec(client)
 

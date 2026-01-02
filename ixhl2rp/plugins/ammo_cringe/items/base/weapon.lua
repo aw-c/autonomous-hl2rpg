@@ -152,31 +152,31 @@ function Item:CheckBiolock(client)
 end
 
 function Item:AddDurability(x)
-	local value = self:GetData("value", 0)
-	local newValue = math.Clamp(value + x, 0, self.durability)
+	-- local value = self:GetData("value", 0)
+	-- local newValue = math.Clamp(value + x, 0, self.durability)
 
-	self:SetData("value", newValue)
+	-- self:SetData("value", newValue)
 
-	local delta = (newValue / self.durability)
+	-- local delta = (newValue / self.durability)
 
-	if !self.lastDurability then
-		self.lastDurability = delta
-	end
+	-- if !self.lastDurability then
+	-- 	self.lastDurability = delta
+	-- end
 
-	local newDelta = math.abs(self.lastDurability - delta)
-	if newDelta >= 0.2 or newDelta < 0 then
-		self:SetData("durability", math.min(math.floor(5 * delta), 4))
-		self.lastDurability = delta
-	end
+	-- local newDelta = math.abs(self.lastDurability - delta)
+	-- if newDelta >= 0.2 or newDelta < 0 then
+	-- 	self:SetData("durability", math.min(math.floor(5 * delta), 4))
+	-- 	self.lastDurability = delta
+	-- end
 
-	if delta <= 0 then
-		self:SetData("durability", 5)
-		self:OnRemoved()
+	-- if delta <= 0 then
+	-- 	self:SetData("durability", 5)
+	-- 	self:OnRemoved()
 
-		return true
-	end
+	-- 	return true
+	-- end
 
-	return false
+	-- return false
 end
 
 function Item:OnInstanced(isCreated)
@@ -520,7 +520,7 @@ if CLIENT then
 		if weapon then
 			local character = LocalPlayer():GetCharacter()
 			local isMelee = weapon.Type == "Melee"
-			local damage = weapon.Primary.Damage
+			local damage = self.Info.Dmg.Limb
 
 			if weapon.Primary.NumShots then
 				damage = damage * weapon.Primary.NumShots

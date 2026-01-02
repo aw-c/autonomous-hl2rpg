@@ -179,8 +179,14 @@ local ITEM_DROP_ACTION = {
 		end*/
 
 		ix.Item:DropItem(item.player, item.id)
-		
-		item.player:EmitSound('npc/zombie/foot_slide' .. math.random(1, 3) .. '.wav', 75, math.random(90, 120), 1)
+
+		timer.Simple(0, function()
+			if (!IsValid(item.entity)) then
+				return
+			end
+
+			item.player:EmitSound('npc/zombie/foot_slide' .. math.random(1, 3) .. '.wav', 75, math.random(90, 120), 1)
+		end)
 
 		return false
 	end,

@@ -17,37 +17,39 @@ do
 	end
 
 	function PLUGIN:IsCharacterRecognized(char, id)
-		if (char.id == id) then
-			return true
-		end
+		-- if (char.id == id) then
+		-- 	return true
+		-- end
 
-		local other = ix.char.loaded[id]
+		-- local other = ix.char.loaded[id]
 
-		if (other) then
-			local client = other:GetPlayer()
+		return true
+
+		-- if (other) then
+		-- 	local client = other:GetPlayer()
 			
-			if client then
-				if client:GetNetVar("hide", 0) == id then
-					return false
-				end
-			end
+		-- 	if client then
+		-- 		if client:GetNetVar("hide", 0) == id then
+		-- 			return false
+		-- 		end
+		-- 	end
 			
-			local faction = ix.faction.indices[other:GetFaction()]
+		-- 	local faction = ix.faction.indices[other:GetFaction()]
 
-			if (faction and faction.isGloballyRecognized) then
-				if client and client:IsCityAdmin() then
-					return true
-				end
+		-- 	if (faction and faction.isGloballyRecognized) then
+		-- 		if client and client:IsCityAdmin() then
+		-- 			return true
+		-- 		end
 
-				return char:IsCityAdmin() or char:IsCombine() or (Schema:GetFactionGroup(char:GetFaction()) == Schema:GetFactionGroup(other:GetFaction()))
-			end
-		end
+		-- 		return char:IsCityAdmin() or char:IsCombine() or (Schema:GetFactionGroup(char:GetFaction()) == Schema:GetFactionGroup(other:GetFaction()))
+		-- 	end
+		-- end
 
-		local owner = LocalPlayer()
+		-- local owner = LocalPlayer()
 
-		if owner.recognize[id] and owner.recognize[id] != "" then
-			return true
-		end
+		-- if owner.recognize[id] and owner.recognize[id] != "" then
+		-- 	return true
+		-- end
 	end
 end
 

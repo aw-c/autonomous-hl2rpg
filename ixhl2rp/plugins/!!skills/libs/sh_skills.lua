@@ -248,7 +248,12 @@ do
 	end
 
 	function charMeta:GetSkill(key)
-		return self:GetSkills()[key][1] or 0
+		local skills = self:GetSkills()
+		if (skills[key]) then
+			return skills[key][1] or 0
+		end
+
+		return 5
 	end
 
 	function charMeta:GetSkillModified(key)

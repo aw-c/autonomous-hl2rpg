@@ -15,11 +15,12 @@ ITEM.bodyGroups = {
 	[1] = 23
 }
 ITEM.armor = {
-	class = 1,
+	class = 2,
 	max_durability = 500,
 	density = 0.75,
 	coverage = {
 		[HITGROUP_CHEST] = 1,
+		[HITGROUP_STOMACH] = 1,
 		[HITGROUP_LEFTARM] = 0.3,
 		[HITGROUP_RIGHTARM] = 0.3,
 	},

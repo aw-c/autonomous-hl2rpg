@@ -855,8 +855,10 @@ function PLUGIN:EntityTakeDamage(target, dmg, penetrate)
 
 	if head_hp <= 0 then
 		target:SetCriticalState(true)
+		target.ixKiller = client
 	elseif torso_hp <= 0 and head_hp <= 0 then
 		target:SetCriticalState(true)
+		target.ixKiller = client
 	end
 
 	if !health.bloodloss then

@@ -896,9 +896,9 @@ function PANEL:Init()
 
 				local skills = character:GetSkills()
 
-				local xp = tooltip:AddRow("description")
-				xp:SetText(L("levelXP", math.Round(skills[k][2]), math.Round(skill:GetRequiredXP(skills, skills[k][1]))))
-				xp:SizeToContents()
+				-- local xp = tooltip:AddRow("description")
+				-- xp:SetText(L("levelXP", math.Round(skills[k][2]), math.Round(skill:GetRequiredXP(skills, skills[k][1]))))
+				-- xp:SizeToContents()
 
 				local description = tooltip:AddRow("description")
 				description:SetText(desc)
