@@ -17,13 +17,13 @@ ITEM.noRepair = true
 ITEM.destroyable = true
 ITEM.armor = {
     class = 2,
-    max_durability = 350,
+    max_durability = 150,
     density = 0.75,
     coverage = {
         [HITGROUP_HEAD] = 1,
     },
     penetration = {
-        bullet = 0.75,
+        bullet = 1,
         impulse = 1,
         buckshot = 0.5,
         explosive = 0.75,

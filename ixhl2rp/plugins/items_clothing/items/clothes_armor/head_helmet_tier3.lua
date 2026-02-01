@@ -23,7 +23,7 @@ ITEM.armor = {
         [HITGROUP_HEAD] = 1,
     },
     penetration = {
-        bullet = 0.75,
+        bullet = 1,
         impulse = 1,
         buckshot = 0.5,
         explosive = 0.75,
